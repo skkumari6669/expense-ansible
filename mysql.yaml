@@ -1,0 +1,14 @@
+- name: Install mysql
+  hosts: mysql
+  tasks:
+  - name: Install MySQL server
+    ansible.builtin.package:
+      name: mysql-server
+      state: present
+
+  - name: Start the service
+    ansible.builtin.service:
+      name: mysqld
+      state: started
+      enabled: yes
+          
