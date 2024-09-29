@@ -1,4 +1,4 @@
-- name: Intall nginx
+- name: Install nginx
   hosts: frontend
   become: yes
   vars:
